@@ -1,2 +1,4 @@
 rootProject.name = 'spring-multi'
-
+include 'apps:chat-app'
+include 'utils:common-util'
+include 'apps:todo-app'

@@ -1,4 +1,4 @@
-package org.example.apis.chat.controller;
+package org.example.apps.chat.controller;
 
 import org.example.utils.common.ExampleUtils;
 import org.springframework.web.bind.annotation.GetMapping;
