@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/apps" />
             <option value="$PROJECT_DIR$/apps/chat-app" />
+            <option value="$PROJECT_DIR$/apps/mvc-app" />
             <option value="$PROJECT_DIR$/apps/todo-app" />
             <option value="$PROJECT_DIR$/utils" />
             <option value="$PROJECT_DIR$/utils/common-util" />

@@ -1,2 +1,2 @@
-## Spring Multi Project
-> Spring Multi Project 
+## Spring Boot Project
+> Study Spring Boot

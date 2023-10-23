@@ -53,3 +53,8 @@ project("apps:todo-app"){
     bootJar.enabled(true)
     jar.enabled(false)
 }
+
+project("apps:mvc-app"){
+    bootJar.enabled(true)
+    jar.enabled(false)
+}
