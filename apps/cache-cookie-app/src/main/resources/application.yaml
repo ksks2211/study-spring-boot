@@ -1,0 +1,11 @@
+spring:
+  data:
+    redis:
+      host: 192.168.0.16
+      port: 6379
+      entry-ttl-minutes: 20
+      cache-prefix: "spring:cache:"
+  session:
+    timeout: 1m
+    redis:
+      namespace: "spring:session:"

@@ -1,0 +1,12 @@
+rootProject.name = 'spring-multi'
+file('apps').listFiles().each { appDir ->
+    if (appDir.isDirectory()) {
+        include "apps:${appDir.name}"
+    }
+}
+
+file('utils').listFiles().each { utilDir ->
+    if (utilDir.isDirectory()) {
+        include "utils:${utilDir.name}"
+    }
+}
