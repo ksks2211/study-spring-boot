@@ -1,11 +1,12 @@
 package org.example.apps.cachecookie.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 /**
  * @author rival
@@ -17,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class SessionController {
 
 
-    private final StringRedisTemplate redisTemplate;
 
 
     @GetMapping("/user")
@@ -32,5 +32,10 @@ public class SessionController {
 
         httpSession.invalidate();
         return "Delete Session : "+sessionId;
+    }
+
+    @GetMapping("/id")
+    public String getSessionInfo(HttpServletRequest request){
+        return request.getSession().getId();
     }
 }
