@@ -16,5 +16,4 @@ import java.util.Map;
 @AllArgsConstructor
 public class ValidationErrorResponse {
     private String message;
-    private Map<String,String> errors;
 }

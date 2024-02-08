@@ -1,11 +1,10 @@
 package org.example.apps.validation.controller;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.example.apps.validation.dto.req.TodoForm;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,13 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TodoController {
 
     @PostMapping("")
-    public String addTodo(@Validated @ModelAttribute("todoForm")TodoForm form, BindingResult br){
-        log.info("Form : {}",form);
-        log.info("BindingResult : {}",br);
+    public String addTodo(@Valid @RequestBody  TodoForm form){
 
-        if(br.hasErrors()){
-            return "Error";
-        }
+
         return "Success";
     }
 }

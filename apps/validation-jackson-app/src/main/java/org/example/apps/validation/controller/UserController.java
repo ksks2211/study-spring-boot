@@ -1,8 +1,8 @@
 package org.example.apps.validation.controller;
 
+import jakarta.validation.Valid;
 import org.example.apps.validation.dto.req.UserRegistrationRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @PostMapping("/users")
-    public ResponseEntity<?> createUser(@Validated @RequestBody UserRegistrationRequest user){
+    public ResponseEntity<?> createUser(@Valid @RequestBody UserRegistrationRequest user){
         return ResponseEntity.ok(user);
     }
 }
