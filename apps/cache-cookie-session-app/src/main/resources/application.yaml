@@ -1,7 +1,7 @@
 spring:
   data:
     redis:
-      host: 192.168.0.16
+      host: 192.168.0.5
       port: 6379
       entry-ttl-minutes: 20
       cache-prefix: "spring:cache:"
